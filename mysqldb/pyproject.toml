@@ -1,0 +1,35 @@
+[project]
+name = "mysqldb"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Matheus Albuquerque",email = "mvca@cin.ufpe.br"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi (>=0.95.0)",
+    "uvicorn (>=0.21.1)",
+    "sqlalchemy (>=2.0.0)",
+    "mysqlclient (>=2.1.1)",
+    "mysql-connector-python (>=8.0.32)",
+    "pydantic (>=1.10.7)",
+    "python-dotenv (>=1.0.0)",
+    "alembic (>=1.10.3)",
+    "pytest (>=7.3.1)",
+    "httpx (>=0.24.0)",
+    "pydantic-settings (>=2.8.1)",
+    "pymysql (>=1.1.1)",
+    "cryptography (>=44.0.2)",
+]
+
+[tool.poetry]
+packages = [{include = "mysqldb", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+select = ["ALL"]
